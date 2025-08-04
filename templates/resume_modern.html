@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Резюме {{ name }}</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 40px;
+        color: #333;
+      }
+      h1 {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 0;
+        color: #2c3e50;
+      }
+      .position {
+        font-size: 14px;
+        color: #666;
+        margin-top: 4px;
+      }
+      hr {
+        border: none;
+        border-top: 1px solid #dcdcdc;
+        margin: 20px 0;
+      }
+      h2 {
+        font-size: 16px;
+        color: #2c3e50;
+        margin-bottom: 8px;
+      }
+      ul {
+        padding-left: 16px;
+        margin-top: 4px;
+      }
+      .skills {
+        margin-top: 4px;
+      }
+      .skill {
+        display: inline-block;
+        background-color: #f0f0f0;
+        border: 1px solid #dcdcdc;
+        border-radius: 4px;
+        padding: 4px 8px;
+        margin: 2px;
+        font-size: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>{{ name }}</h1>
+    {% if position %}
+    <div class="position">{{ position }}</div>
+    {% endif %}
+    <hr />
+    <h2>Опыт работы</h2>
+    <ul>
+      {% for item in experience %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+    <hr />
+    <h2>Навыки</h2>
+    <div class="skills">
+      {% for skill in skills %}
+      <span class="skill">{{ skill }}</span>
+      {% endfor %}
+    </div>
+    {% if education %}
+    <hr />
+    <h2>Образование / Курсы</h2>
+    <ul>
+      {% for ed in education %}
+      <li>{{ ed }}</li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </body>
+</html>
