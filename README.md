@@ -24,7 +24,7 @@ resume_pdf_api/
 
 * Python 3.11+
 * Библиотеки из `requirements.txt` (`pip install -r requirements.txt`)
-* **wkhtmltopdf** — внешний бинарник для pdfkit. Его нужно установить самостоятельно (например, `sudo apt install wkhtmltopdf` на Debian/Ubuntu). В Docker‑образе установка происходит автоматически.
+* **wkhtmltopdf** — внешний бинарник для pdfkit. Его нужно установить самостоятельно (например, `sudo apt install wkhtmltopdf` на Debian/Ubuntu). На Windows нужно скачивать инсталлер(https://wkhtmltopdf.org/downloads.html) и прописывать путь до exe в переменную Path. В Docker‑образе установка происходит автоматически.
 
 ## Пример запроса
 
